@@ -14,6 +14,9 @@ import History from '../../packages/slate-history/package.json'
 import Hyperscript from '../../packages/slate-hyperscript/package.json'
 import React from '../../packages/slate-react/package.json'
 
+function getNameWithoutScope(pkg) {
+  return pkg.name.split('/')[1];
+}
 /**
  * Return a Rollup configuration for a `pkg` with `env` and `target`.
  */
@@ -22,7 +25,7 @@ function configure(pkg, env, target) {
   const isProd = env === 'production'
   const isUmd = target === 'umd'
   const isModule = target === 'module'
-  const input = `packages/${pkg.name}/src/index.ts`
+  const input = `packages/${getNameWithoutScope(pkg)}/src/index.ts`
   const deps = []
     .concat(pkg.dependencies ? Object.keys(pkg.dependencies) : [])
     .concat(pkg.peerDependencies ? Object.keys(pkg.peerDependencies) : [])
@@ -43,7 +46,7 @@ function configure(pkg, env, target) {
 
     typescript({
       abortOnError: false,
-      tsconfig: `./packages/${pkg.name}/tsconfig.json`,
+      tsconfig: `./packages/${getNameWithoutScope(pkg)}/tsconfig.json`,
       // COMPAT: Without this flag sometimes the declarations are not updated.
       // clean: isProd ? true : false,
       clean: true,
@@ -52,7 +55,7 @@ function configure(pkg, env, target) {
     // Allow Rollup to resolve CommonJS modules, since it only resolves ES2015
     // modules by default.
     commonjs({
-      exclude: [`packages/${pkg.name}/src/**`],
+      exclude: [`packages/${getNameWithoutScope(pkg)}/src/**`],
       // HACK: Sometimes the CommonJS plugin can't identify named exports, so
       // we have to manually specify named exports here for them to work.
       // https://github.com/rollup/rollup-plugin-commonjs#custom-named-exports
@@ -88,7 +91,7 @@ function configure(pkg, env, target) {
     // Use Babel to transpile the result, limiting it to the source code.
     babel({
       runtimeHelpers: true,
-      include: [`packages/${pkg.name}/src/**`],
+      include: [`packages/${getNameWithoutScope(pkg)}/src/**`],
       extensions: ['.js', '.ts', '.tsx'],
       presets: [
         '@babel/preset-typescript',
@@ -138,7 +141,7 @@ function configure(pkg, env, target) {
       onwarn,
       output: {
         format: 'umd',
-        file: `packages/${pkg.name}/${isProd ? pkg.umdMin : pkg.umd}`,
+        file: `packages/${getNameWithoutScope(pkg)}/${isProd ? pkg.umdMin : pkg.umd}`,
         exports: 'named',
         name: startCase(pkg.name).replace(/ /g, ''),
         globals: pkg.umdGlobals,
@@ -154,12 +157,12 @@ function configure(pkg, env, target) {
       onwarn,
       output: [
         {
-          file: `packages/${pkg.name}/${pkg.module}`,
+          file: `packages/${getNameWithoutScope(pkg)}/${pkg.module}`,
           format: 'es',
           sourcemap: true,
         },
         {
-          file: `packages/${pkg.name}/${pkg.main}`,
+          file: `packages/${getNameWithoutScope(pkg)}/${pkg.main}`,
           format: 'cjs',
           exports: 'named',
           sourcemap: true,
