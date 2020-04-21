@@ -1,6 +1,12 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Slate, Editable, withReact } from '@mccarthyfinch/slate-react'
-import { Editor, Transforms, Range, Point, createEditor } from '@mccarthyfinch/slate'
+import {
+  Editor,
+  Transforms,
+  Range,
+  Point,
+  createEditor,
+} from '@mccarthyfinch/slate'
 import { withHistory } from '@mccarthyfinch/slate-history'
 
 const SHORTCUTS = {

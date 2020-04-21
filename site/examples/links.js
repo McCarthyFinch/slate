@@ -1,6 +1,11 @@
 import React, { useState, useMemo } from 'react'
 import isUrl from 'is-url'
-import { Slate, Editable, withReact, useSlate } from '@mccarthyfinch/slate-react'
+import {
+  Slate,
+  Editable,
+  withReact,
+  useSlate,
+} from '@mccarthyfinch/slate-react'
 import { Transforms, Editor, Range, createEditor } from '@mccarthyfinch/slate'
 import { withHistory } from '@mccarthyfinch/slate-history'
 

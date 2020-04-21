@@ -1,5 +1,11 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react'
-import { Slate, Editable, ReactEditor, withReact, useSlate } from '@mccarthyfinch/slate-react'
+import {
+  Slate,
+  Editable,
+  ReactEditor,
+  withReact,
+  useSlate,
+} from '@mccarthyfinch/slate-react'
 import { Editor, Transforms, Text, createEditor } from '@mccarthyfinch/slate'
 import { css } from 'emotion'
 import { withHistory } from '@mccarthyfinch/slate-history'

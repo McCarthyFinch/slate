@@ -15,7 +15,7 @@ import Hyperscript from '../../packages/slate-hyperscript/package.json'
 import React from '../../packages/slate-react/package.json'
 
 function getNameWithoutScope(pkg) {
-  return pkg.name.split('/')[1];
+  return pkg.name.split('/')[1]
 }
 /**
  * Return a Rollup configuration for a `pkg` with `env` and `target`.
@@ -141,7 +141,9 @@ function configure(pkg, env, target) {
       onwarn,
       output: {
         format: 'umd',
-        file: `packages/${getNameWithoutScope(pkg)}/${isProd ? pkg.umdMin : pkg.umd}`,
+        file: `packages/${getNameWithoutScope(pkg)}/${
+          isProd ? pkg.umdMin : pkg.umd
+        }`,
         exports: 'named',
         name: startCase(pkg.name).replace(/ /g, ''),
         globals: pkg.umdGlobals,

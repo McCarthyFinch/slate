@@ -1,4 +1,11 @@
-import { Editor, Node, Path, Point, Range, Transforms } from '@mccarthyfinch/slate'
+import {
+  Editor,
+  Node,
+  Path,
+  Point,
+  Range,
+  Transforms,
+} from '@mccarthyfinch/slate'
 
 import { Key } from '../utils/key'
 import {

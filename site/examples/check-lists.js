@@ -7,7 +7,13 @@ import {
   useReadOnly,
   ReactEditor,
 } from '@mccarthyfinch/slate-react'
-import { Editor, Transforms, Range, Point, createEditor } from '@mccarthyfinch/slate'
+import {
+  Editor,
+  Transforms,
+  Range,
+  Point,
+  createEditor,
+} from '@mccarthyfinch/slate'
 import { css } from 'emotion'
 import { withHistory } from '@mccarthyfinch/slate-history'
 
