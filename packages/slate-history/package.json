@@ -1,5 +1,5 @@
 {
-  "name": "slate-history",
+  "name": "@mccarthyfinch/slate-history",
   "description": "An operation-based history implementation for Slate editors.",
   "version": "0.57.1",
   "license": "MIT",
@@ -18,14 +18,14 @@
     "is-plain-object": "^3.0.0"
   },
   "devDependencies": {
-    "slate": "^0.57.1",
-    "slate-hyperscript": "^0.57.1"
+    "@mccarthyfinch/slate": "^0.57.1",
+    "@mccarthyfinch/slate-hyperscript": "^0.57.1"
   },
   "peerDependencies": {
-    "slate": ">=0.55.0"
+    "@mccarthyfinch/slate": ">=0.55.0"
   },
   "umdGlobals": {
-    "slate": "Slate"
+    "@mccarthyfinch/slate": "@mccarthyfinch/slate"
   },
   "keywords": [
     "editor",
@@ -33,7 +33,7 @@
     "operation",
     "redo",
     "save",
-    "slate",
+    "@mccarthyfinch/slate",
     "stack",
     "undo"
   ]

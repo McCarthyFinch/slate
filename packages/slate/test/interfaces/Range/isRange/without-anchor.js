@@ -1,4 +1,4 @@
-import { Range } from 'slate'
+import { Range } from '@mccarthyfinch/slate'
 
 export const input = {
   focus: {

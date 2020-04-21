@@ -1,7 +1,7 @@
 /** @jsx jsx  */
 
-import { Node } from 'slate'
-import { jsx } from 'slate-hyperscript'
+import { Node } from '@mccarthyfinch/slate'
+import { jsx } from '@mccarthyfinch/slate-hyperscript'
 
 export const input = <text>one</text>
 

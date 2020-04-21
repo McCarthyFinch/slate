@@ -1,9 +1,9 @@
 import assert from 'assert'
 import { fixtures } from '../../../support/fixtures'
-import { createHyperscript } from 'slate-hyperscript'
+import { createHyperscript } from '@mccarthyfinch/slate-hyperscript'
 import { withHistory } from '..'
 
-describe('slate-history', () => {
+describe('@mccarthyfinch/slate-history', () => {
   fixtures(__dirname, 'undo', ({ module }) => {
     const { input, run, output } = module
     const editor = withTest(withHistory(input))

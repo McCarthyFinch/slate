@@ -1,6 +1,6 @@
 import React, { useMemo, useCallback, useRef, useEffect, useState } from 'react'
-import { Editor, Transforms, Range, createEditor } from 'slate'
-import { withHistory } from 'slate-history'
+import { Editor, Transforms, Range, createEditor } from '@mccarthyfinch/slate'
+import { withHistory } from '@mccarthyfinch/slate-history'
 import {
   Slate,
   Editable,
@@ -8,7 +8,7 @@ import {
   withReact,
   useSelected,
   useFocused,
-} from 'slate-react'
+} from '@mccarthyfinch/slate-react'
 
 import { Portal } from '../components'
 

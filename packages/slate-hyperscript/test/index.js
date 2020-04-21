@@ -2,7 +2,7 @@ import assert from 'assert'
 import { resolve } from 'path'
 import { fixtures } from '../../../support/fixtures'
 
-describe('slate-hyperscript', () => {
+describe('@mccarthyfinch/slate-hyperscript', () => {
   fixtures(resolve(__dirname, 'fixtures'), ({ module }) => {
     const { input, output } = module
     let actual = {}

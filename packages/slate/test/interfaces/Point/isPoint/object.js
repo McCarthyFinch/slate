@@ -1,4 +1,4 @@
-import { Point } from 'slate'
+import { Point } from '@mccarthyfinch/slate'
 
 export const input = {}
 

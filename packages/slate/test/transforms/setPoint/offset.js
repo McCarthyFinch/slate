@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { Editor, Transforms } from 'slate'
+import { Editor, Transforms } from '@mccarthyfinch/slate'
 import { jsx } from '../..'
 
 export const run = editor => {

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { jsx } from 'slate-hyperscript'
+import { jsx } from '@mccarthyfinch/slate-hyperscript'
 
 export const input = (
   <text b>
