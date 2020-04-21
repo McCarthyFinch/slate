@@ -162,9 +162,13 @@ export const Editable = (props: EditableProps) => {
     domSelection.removeAllRanges()
 
     if (newDomRange) {
-      domSelection.addRange(newDomRange!)
-      const leafEl = newDomRange.startContainer.parentElement!
-      scrollIntoView(leafEl, { scrollMode: 'if-needed' })
+      try {
+        domSelection.addRange(newDomRange!)
+        const leafEl = newDomRange.startContainer.parentElement!
+        scrollIntoView(leafEl, { scrollMode: 'if-needed' })
+      } catch (e) {
+        console.error(e);
+      }
     }
 
     setTimeout(() => {
