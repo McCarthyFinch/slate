@@ -167,7 +167,8 @@ export const Editable = (props: EditableProps) => {
         const leafEl = newDomRange.startContainer.parentElement!
         scrollIntoView(leafEl, { scrollMode: 'if-needed' })
       } catch (e) {
-        console.error(e);
+        // eslint-disable-next-line no-console
+        console.error(e)
       }
     }
 
