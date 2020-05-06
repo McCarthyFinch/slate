@@ -1,5 +1,9 @@
 import ReactDOM from 'react-dom'
-import { Editor, Node, Path, Operation, Transforms, Range } from '@mccarthyfinch/slate'
+<<<<<<< HEAD
+import { Editor, Node, Path, Operation, Transforms } from '@mccarthyfinch/slate'
+=======
+import { Editor, Node, Path, Operation, Transforms, Range } from 'slate'
+>>>>>>> 8737f0411a0a151859044e3f858cdbfe9e3f8cff
 
 import { ReactEditor } from './react-editor'
 import { Key } from '../utils/key'
