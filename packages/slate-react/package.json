@@ -1,7 +1,7 @@
 {
   "name": "@mccarthyfinch/slate-react",
   "description": "Tools for building completely customizable richtext editors with React.",
-  "version": "0.58.1",
+  "version": "0.58.2-alpha.0",
   "license": "MIT",
   "repository": "git://github.com/ianstormtaylor/slate.git",
   "main": "dist/index.js",
@@ -23,13 +23,13 @@
     "scroll-into-view-if-needed": "^2.2.20"
   },
   "devDependencies": {
-    "@mccarthyfinch/slate": "^0.58.1",
-    "@mccarthyfinch/slate-hyperscript": "^0.58.1"
+    "@mccarthyfinch/slate": "^0.58.2-alpha.0",
+    "@mccarthyfinch/slate-hyperscript": "^0.58.2-alpha.0"
   },
   "peerDependencies": {
+    "@mccarthyfinch/slate": ">=0.55.0",
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
-    "@mccarthyfinch/slate": ">=0.55.0"
+    "react-dom": ">=16.8.0"
   },
   "umdGlobals": {
     "react": "React",
