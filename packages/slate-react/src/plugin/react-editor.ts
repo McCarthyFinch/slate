@@ -409,10 +409,20 @@ export const ReactEditor = {
         range.setStart(textNode, 0)
         range.setEnd(nearestNode, nearestOffset)
         const contents = range.cloneContents()
-        const removals = [
-          ...contents.querySelectorAll('[data-slate-zero-width]'),
-          ...contents.querySelectorAll('[contenteditable=false]'),
-        ]
+
+        const removals: DOMElement[] = []
+        const zeroWidthElements = contents.querySelectorAll(
+          '[data-slate-zero-width]'
+        )
+        Array.prototype.forEach.call(zeroWidthElements, element => {
+          removals.push(element)
+        })
+        const contenteditableFalse = contents.querySelectorAll(
+          '[contenteditable=false]'
+        )
+        Array.prototype.forEach.call(contenteditableFalse, element => {
+          removals.push(element)
+        })
 
         removals.forEach(el => {
           el!.parentNode!.removeChild(el)
