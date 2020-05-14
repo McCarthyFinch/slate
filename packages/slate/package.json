@@ -1,5 +1,5 @@
 {
-  "name": "slate",
+  "name": "@mccarthyfinch/slate",
   "description": "A completely customizable framework for building rich text editors.",
   "version": "0.58.1",
   "license": "MIT",
@@ -36,7 +36,7 @@
     "rich",
     "richtext",
     "richtext",
-    "slate",
+    "@mccarthyfinch/slate",
     "text",
     "wysiwyg",
     "wysiwym"

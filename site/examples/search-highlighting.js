@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useMemo } from 'react'
-import { Slate, Editable, withReact } from 'slate-react'
-import { Text, createEditor } from 'slate'
+import { Slate, Editable, withReact } from '@mccarthyfinch/slate-react'
+import { Text, createEditor } from '@mccarthyfinch/slate'
 import { css } from 'emotion'
-import { withHistory } from 'slate-history'
+import { withHistory } from '@mccarthyfinch/slate-history'
 
 import { Icon, Toolbar } from '../components'
 

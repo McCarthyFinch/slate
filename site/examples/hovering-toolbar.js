@@ -1,11 +1,11 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react'
-import { Slate, Editable, ReactEditor, withReact, useSlate } from 'slate-react'
-import { Editor, Transforms, Text, createEditor } from 'slate'
+import { Slate, Editable, ReactEditor, withReact, useSlate } from '@mccarthyfinch/slate-react'
+import { Editor, Transforms, Text, createEditor } from '@mccarthyfinch/slate'
 import { css } from 'emotion'
-import { withHistory } from 'slate-history'
+import { withHistory } from '@mccarthyfinch/slate-history'
 
 import { Button, Icon, Menu, Portal } from '../components'
-import { Range } from 'slate'
+import { Range } from '@mccarthyfinch/slate'
 
 const HoveringMenuExample = () => {
   const [value, setValue] = useState(initialValue)

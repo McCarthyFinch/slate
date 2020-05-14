@@ -1,4 +1,4 @@
-import { Operation } from 'slate'
+import { Operation } from '@mccarthyfinch/slate'
 
 export const input = [
   {

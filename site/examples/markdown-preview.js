@@ -1,8 +1,8 @@
 import Prism from 'prismjs'
 import React, { useState, useCallback, useMemo } from 'react'
-import { Slate, Editable, withReact } from 'slate-react'
-import { Text, createEditor } from 'slate'
-import { withHistory } from 'slate-history'
+import { Slate, Editable, withReact } from '@mccarthyfinch/slate-react'
+import { Text, createEditor } from '@mccarthyfinch/slate'
+import { withHistory } from '@mccarthyfinch/slate-history'
 import { css } from 'emotion'
 
 // eslint-disable-next-line
