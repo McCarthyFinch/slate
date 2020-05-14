@@ -100,7 +100,7 @@ function configure(pkg, env, target) {
         [
           '@babel/preset-env',
           isUmd
-            ? { modules: false }
+            ? { modules: false, targets: { ie: '11', safari: '12.1' } }
             : {
                 exclude: [
                   '@babel/plugin-transform-regenerator',
@@ -109,6 +109,8 @@ function configure(pkg, env, target) {
                 modules: false,
                 targets: {
                   esmodules: isModule,
+                  ie: '11',
+                  safari: '12.1',
                 },
               },
         ],
