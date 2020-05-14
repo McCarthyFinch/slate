@@ -1,5 +1,12 @@
 import React from 'react'
-import { Editor, Range, Element, NodeEntry, Ancestor, Descendant } from '@mccarthyfinch/slate'
+import {
+  Editor,
+  Range,
+  Element,
+  NodeEntry,
+  Ancestor,
+  Descendant,
+} from '@mccarthyfinch/slate'
 
 import ElementComponent from './element'
 import TextComponent from './text'
